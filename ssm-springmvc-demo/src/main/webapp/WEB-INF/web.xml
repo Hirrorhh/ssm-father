@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="MyWebApp" version="2.5">
+	<display-name>xxx</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	 <servlet>
+<!--     		在web.xml（web程序的入口） 配置了DispatcherServlet，
+				并且指定所有以.do结尾的请求全部交给DispatcherServlet来处理-->
+		     <servlet-name>springmvc</servlet-name>
+		     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		     <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+	    	<servlet-name>springmvc</servlet-name>
+<!-- 	    	配置/*会拦截所有请求，包括静态页面 -->
+	    	<url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+</web-app>
