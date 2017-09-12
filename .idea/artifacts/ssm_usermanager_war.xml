@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ssm-usermanager:war">
+    <output-path>$PROJECT_DIR$/ssm-usermanager/target</output-path>
+    <root id="archive" name="ssm-usermanager.war">
+      <element id="artifact" artifact-name="ssm-usermanager:war exploded" />
+    </root>
+  </artifact>
+</component>
