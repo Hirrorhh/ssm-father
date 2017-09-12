@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ssm-springmvc-demo" />
         <module name="ssm-usermanager" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ssm-father" target="1.7" />
+      <module name="ssm-springmvc-demo" target="1.7" />
       <module name="ssm-usermanager" target="1.7" />
     </bytecodeTargetLevel>
   </component>

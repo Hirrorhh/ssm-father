@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ssm-father.iml" filepath="$PROJECT_DIR$/ssm-father.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-springmvc-demo/ssm-springmvc-demo.iml" filepath="$PROJECT_DIR$/ssm-springmvc-demo/ssm-springmvc-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm-usermanager/ssm-usermanager.iml" filepath="$PROJECT_DIR$/ssm-usermanager/ssm-usermanager.iml" />
     </modules>
   </component>
