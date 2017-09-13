@@ -11,9 +11,9 @@
 	<!-- 配置注解驱动，会默认的加载上面的两个 HandlerMapping, HandlerAdapter -->
 	<mvc:annotation-driven />
 	<!-- 开启注解扫描 -->
-	<context:component-scan base-package="cn.ssm.usermanage.controller"/>
+	<context:component-scan base-package="cn.ssm.usermanager.controller"/>
 
-<!-- 	<bean name="excelView" class="cn.itcast.usermanage.view.UserExcelView"></bean> -->
+ 	<bean name="excelView" class="cn.ssm.usermanager.view.UserExcelView"></bean>
 	
 	<!-- 视图解析器 -->
 	<bean
@@ -24,9 +24,9 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	<!-- 配置第二个视图解析器 -->
-<!-- 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"> -->
-<!-- 		<property name="order" value="1"></property> -->
-<!-- 	</bean> -->
+ 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+ 		<property name="order" value="1"></property>
+ 	</bean>
 
 	<!-- 定义文件上传解析器 -->
 <!-- 	<bean id="multipartResolver" -->
@@ -38,6 +38,6 @@
 <!-- 	</bean> -->
 	
 	<!-- 解决静态资源被拦截的问题 -->
-<!-- 	<mvc:default-servlet-handler/> -->
+ 	<mvc:default-servlet-handler/>
 
 </beans>

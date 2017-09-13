@@ -17,16 +17,18 @@ import java.util.List;
 @Controller
 public class UserController {
 
-	
+
 	/**
+	 *
 	 * 返回集合
 	 * 返回多个User对象
-	 */
+     * @return
+     */
 	@RequestMapping(value="list")
 	public ModelAndView getUserList(){
 		ModelAndView mv = new ModelAndView("user");
 		try {
-			List<User> list = new ArrayList<User>();
+			List<User> list = new ArrayList<>();
 			for(Long i = 1L;i<10L;i++){
 				User user = new User();
 				user.setId(i);
@@ -42,15 +44,17 @@ public class UserController {
 		}
 		return mv;
 	}
-	
+
+
 	/**
 	 * 直接返回视图名称
-	 * @return
-	 * @throws MyException 
+	 * @return string
+	 * @throws MyException
 	 */
 	@RequestMapping("teststr")
 	public String test(Model model) throws MyException{
-		List<User> list = new ArrayList<User>();
+		List<User> list = new ArrayList<>();
+
 		for(Long i = 1L;i<10L;i++){
 			User user = new User();
 			user.setId(i);
@@ -58,12 +62,13 @@ public class UserController {
 			user.setAge(18);
 			user.setName("lisi"+i);
 			list.add(user);
-		}
-//		if(true){
+
+        }
+	if(true){
 		throw new MyException("自定义异常被抛出!");
-//		}
-//		model.addAttribute("users", list);
-//		return "";
+		}
+		model.addAttribute("users", list);
+		return "";
 	}
 	
 	
@@ -71,12 +76,12 @@ public class UserController {
 	
 	/**
 	 * 异步请求需要将返回值转成json
-	 * @return
+	 *
 	 */
 	@RequestMapping(value="ajax/list")
 	@ResponseBody
 	public  List<User> getUsers(){
-		List<User> list = new ArrayList<User>();
+		List<User> list = new ArrayList<>();
 		for(Long i = 1L;i<10L;i++){
 			User user = new User();
 			user.setId(i);

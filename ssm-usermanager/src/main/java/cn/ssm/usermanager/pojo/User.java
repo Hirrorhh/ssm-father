@@ -1,16 +1,19 @@
 package cn.ssm.usermanager.pojo;
 
-import java.io.Serializable;
-import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
 
-public class User implements Serializable{
+import java.io.Serializable;
+import java.sql.Date;
+
+
+public class User implements Serializable {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = -1002534370630512914L;
+     *
+     */
+    private static final long serialVersionUID = -1002534370630512914L;
 
-	private Long id;
+    private Long id;
 
     // 用户名
     private String userName;
@@ -28,6 +31,7 @@ public class User implements Serializable{
     private Integer sex;
 
     // 出生日期
+    //@DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
 
     // 创建时间
@@ -106,6 +110,10 @@ public class User implements Serializable{
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+    }
+
+    public String getSexName() {
+        return this.getSex() == 1 ? "男" : this.getSex() == 2 ? "女" : "未知";
     }
 
     @Override

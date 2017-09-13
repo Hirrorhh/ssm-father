@@ -24,7 +24,7 @@ public class UserDaoTest {
 
 
     @Autowired
-    private UserDao userDao;
+    private UserMapper userDao;
 
   /*  @Before
     public void setUp() throws Exception {
@@ -40,13 +40,5 @@ public class UserDaoTest {
         System.out.println(user);
     }
 
-
-    @Test
-    public void testQueryAll() {
-        List<User> list = this.userDao.queryAll();
-        for(User u : list){
-            System.out.println(u);
-        }
-    }
 
 }

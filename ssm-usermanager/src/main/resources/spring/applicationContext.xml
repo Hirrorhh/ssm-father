@@ -9,7 +9,7 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 	<!-- 配置注解扫描器 @Service -->
-	<context:component-scan base-package="cn.ssm.usermanage.service"/>
+	<context:component-scan base-package="cn.ssm.usermanager.service"/>
 
 	<!-- 加载资源文件 -->
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
