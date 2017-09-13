@@ -3,7 +3,7 @@ package cn.ssm.usermanager.pojo;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 
 public class User implements Serializable {
@@ -31,13 +31,15 @@ public class User implements Serializable {
     private Integer sex;
 
     // 出生日期
-    //@DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
 
     // 创建时间
+
     private Date created;
 
     // 更新时间
+
     private Date updated;
 
     public Long getId() {

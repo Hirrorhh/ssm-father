@@ -31,7 +31,7 @@
 	    </thead>
 	</table>
 	</div>
-<div id="userAdd" class="easyui-window" title="新增会员" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/user/user/user-add'" style="width:500px;height:300px;padding:10px;">
+<div id="userAdd" class="easyui-window" title="会员信息" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/user/user/user-add'" style="width:500px;height:300px;padding:10px;">
 
 </div>
 <form action="/user/export/excel" method="post" style="display: none;">
@@ -77,10 +77,14 @@ var toolbar = [{
     text:'编辑',
     iconCls:'icon-edit',
     handler:function(){
-        var rowData = $('#userList').datagrid('getSelected');
+        var rowData = $('#userList').datagrid('getSelections');
+        if (rowData == null || rowData.length !=1){
+            $.messager.alert('警告','请选择一行进行操作用户!');
+            return;
+        }
         $("#userAdd").window({
             onLoad:function(){
-                $("#userAdd").form("load",rowData);
+                $("#userAdd").form("load",rowData[0]);
             }
         }).window("open");
     }
@@ -127,12 +131,13 @@ function doDblClickRow(rowIndex, rowData){
 
       /*  $('#userAdd').window("open");
         $('#userAdd').form('load',rowData);*/
+
     $("#userAdd").window({
         onLoad:function(){
+            rowData.birthday = new Date(rowData.birthday).format("yyyy-MM-ss");
             $("#userAdd").form("load",rowData);
         }
     }).window("open");
-
 }
 </script>
 </body>

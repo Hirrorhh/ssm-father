@@ -52,6 +52,11 @@
 				$('#userAdd').window('close');
 				$("#userList").datagrid("reload");
 				clearForm();
+			}else if(data.status == 220){
+                $.messager.alert('提示','修改会员成功!');
+                $('#userAdd').window('close');
+                $("#userList").datagrid("reload");
+                clearForm();
 			}else{
 				$.messager.alert('提示','新增会员失败!');
 			}

@@ -82,7 +82,7 @@ public class UserController {
             Boolean flag = this.userService.update(user);
             if (flag) {
                 //新增成功
-                resultMap.put("status", 200);
+                resultMap.put("status", 220);
             }
         }
         return resultMap;
