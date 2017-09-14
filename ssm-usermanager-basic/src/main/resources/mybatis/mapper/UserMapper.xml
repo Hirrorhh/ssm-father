@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.ssm.usermanager.dao.UserMapper">
+    <cache/>
+    <resultMap type="User" id="userResultMap">
+        <id column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+    </resultMap>
+    <select id="queryUserList" resultType="User">
+      SELECT * FROM  tb_user
+    </select>
+
+    <insert id="save" parameterType="User">
+                      INSERT INTO tb_user (
+                                        id,
+                                        user_name,
+                                        password,
+                                        name,
+                                        age,
+                                        sex,
+                                        birthday,
+                                        created,
+                                        updated
+                                    )
+                                    VALUES (
+                                        null,
+                                        #{userName},
+                                        #{password},
+                                        #{name},
+                                        #{age},
+                                        #{sex},
+                                        #{birthday},
+                                        NOW(),
+                                        NOW()
+                                        );
+    </insert>
+
+    <delete id="deleteUserByIds">
+        DELETE FROM tb_user where id IN (${ids})
+    </delete>
+    <update id="updateUser" parameterType="User">
+        UPDATE tb_user
+        <set>
+            <if test="userName != null and userName.trim() != ''">
+                user_name = #{userName},
+            </if>
+            <if test="password != null and password.trim() != ''">
+                password = #{password},
+            </if>
+            <if test="name != null and name.trim() != ''">
+                name = #{name},
+            </if>
+            <if test="age != null">
+                age = #{age},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday},
+            </if>
+            updated = NOW()
+        </set>
+            WHERE
+            id = #{id};
+    </update>
+</mapper>

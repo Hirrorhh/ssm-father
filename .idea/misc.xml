@@ -5,12 +5,22 @@
     <file type="web" url="file://$PROJECT_DIR$/ssm-basic" />
     <file type="web" url="file://$PROJECT_DIR$/ssm-springmvc-demo" />
     <file type="web" url="file://$PROJECT_DIR$/ssm-usermanager" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm-usermanager-basic" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm-usermanager-basicmapper" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm-usermanager-bs" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm-usermanager-restful" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm-usermanager-restful/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/ssm-usermanager-basicmapper/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.7" project-jdk-type="JavaSDK">

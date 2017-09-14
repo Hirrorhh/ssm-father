@@ -39,7 +39,7 @@
           <element id="library" level="project" name="Maven: org.apache.poi:poi:3.10.1" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.5" />
           <element id="library" level="project" name="Maven: joda-time:joda-time:2.5" />
-          <element id="library" level="project" name="Maven: com.github.abel533:mapper:3.0.1" />
+          <element id="library" level="project" name="Maven: com.github.abel533:mapper:2.3.4" />
           <element id="library" level="project" name="Maven: javax.persistence:persistence-api:1.0" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.2" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />

@@ -9,6 +9,10 @@
         <module name="ssm-basic" />
         <module name="ssm-springmvc-demo" />
         <module name="ssm-usermanager" />
+        <module name="ssm-usermanager (1)" />
+        <module name="ssm-usermanager-basic" />
+        <module name="ssm-usermanager-basic (1)" />
+        <module name="ssm-usermanager-restful" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +20,12 @@
       <module name="ssm-father" target="1.7" />
       <module name="ssm-springmvc-demo" target="1.7" />
       <module name="ssm-usermanager" target="1.7" />
+      <module name="ssm-usermanager (1)" target="1.7" />
+      <module name="ssm-usermanager-basic" target="1.7" />
+      <module name="ssm-usermanager-basic (1)" target="1.7" />
+      <module name="ssm-usermanager-basicmapper" target="1.7" />
+      <module name="ssm-usermanager-bs" target="1.7" />
+      <module name="ssm-usermanager-restful" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
